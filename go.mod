@@ -5,6 +5,7 @@ go 1.21.0
 require (
 	github.com/badoux/checkmail v1.2.4
 	github.com/gofiber/fiber/v2 v2.52.4
+	github.com/gojp/kana v0.1.0
 	github.com/google/uuid v1.6.0
 	github.com/joho/godotenv v1.5.1
 	golang.org/x/crypto v0.24.0
