@@ -2,9 +2,9 @@ package model
 
 import "github.com/google/uuid"
 
-type UserJkt48Point struct {
+type UserJkt48PointBalance struct {
 	ID                uuid.UUID
 	UserID            uuid.UUID
-	PointBalance      uint64
-	BonusPointBalance uint64
+	PointBalance      int64
+	BonusPointBalance int64
 }
