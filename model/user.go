@@ -6,6 +6,8 @@ import (
 	guuid "github.com/google/uuid"
 )
 
+//TODO: Refactor User table
+
 type User struct {
 	ID        guuid.UUID `gorm:"primaryKey" json:"-"`
 	Email     string     `json:"email"`
