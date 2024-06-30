@@ -15,3 +15,8 @@ A replica of jkt48.com backend, using Go.
 - request: entities for requests
 - constant: the constants of the app
 - middleware: use for handling middlewares that later need in routes
+
+# Entity Relationship Diagram
+rough ERD, will be updated soon
+
+[![ER Diagram](https://pbs.twimg.com/media/GRVF2lAaIAA2wjL?format=jpg)](https://x.com/kamil5b/status/1807427722031010060)
