@@ -14,6 +14,7 @@ require (
 )
 
 require (
+	github.com/abakum/gozodiac v0.0.0-20230421061758-fa2f82ab0d93 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect

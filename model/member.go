@@ -3,6 +3,7 @@ package model
 import (
 	"time"
 
+	"github.com/abakum/gozodiac"
 	"github.com/gojp/kana"
 	"github.com/google/uuid"
 )
@@ -27,8 +28,9 @@ func (m *Member) New(name, callName, bloodType string, birthday time.Time, gener
 	m.Generation = generation
 	m.Height = height
 	m.BloodType = bloodType
+	horoscope := gozodiac.GetZodiacSign(birthday)
+	m.Horoscope = horoscope[0].String()
 
 	m.JapaneseName = kana.RomajiToKatakana(m.CallName)
-	//TODO: add horoscope
 
 }

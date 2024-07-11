@@ -1,3 +1,5 @@
+github.com/abakum/gozodiac v0.0.0-20230421061758-fa2f82ab0d93 h1:nfHmluJxHu+PLRpyU4XsoCB8RnaOlkEys8hXkwRo7gU=
+github.com/abakum/gozodiac v0.0.0-20230421061758-fa2f82ab0d93/go.mod h1:bdnSVcc5g8Lkalefs6IrMIEoNggBx/1EwQNOpEStQ/Y=
 github.com/andybalholm/brotli v1.0.5 h1:8uQZIdzKmjc/iuPu7O2ioW48L81FgatrcpfFmiq/cCs=
 github.com/andybalholm/brotli v1.0.5/go.mod h1:fO7iG3H7G2nSZ7m0zPUDn85XEX2GTukHGRSepvi9Eig=
 github.com/badoux/checkmail v1.2.4 h1:4zMjdYDjE2Q7xF06VNfyN8P9JGU7epLjNb+Yu5OThVI=
