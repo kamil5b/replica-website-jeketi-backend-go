@@ -5,6 +5,32 @@
 
 A replica of jkt48.com backend, using Go.
 
+# Project Roadmap
+- [ ] Authentication
+- [ ] Seeding active member prior to 2024
+- [ ] User attachment system
+- [ ] JKT48 Point system with no gateway payment
+- [ ] OFC System
+- [ ] CRUD Show 
+- [ ] Show gacha system
+- [ ] CRUD JKT48 Event (HS, VC, etc)
+- [ ] Event war system
+- [ ] CRUD Master data
+- [ ] **INITIAL RELEASE v1.0.0**
+
+Potential improvements after release:
+- [ ] Send email
+- [ ] OTP
+- [ ] RBAC
+- [ ] Suspension system
+- [ ] User blacklist
+- [ ] Gacha soft blacklist
+- [ ] Gacha whitelist
+- [ ] Gacha oshimen based
+- [ ] MVPs
+- [ ] Show discount based on age
+- [ ] Concert attendance
+
 # Folder Management
 - root: use for system to run the app
 - route: list api routes
