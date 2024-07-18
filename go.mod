@@ -5,6 +5,7 @@ go 1.21.0
 require (
 	github.com/badoux/checkmail v1.2.4
 	github.com/gofiber/fiber/v2 v2.52.4
+	github.com/gojp/kana v0.1.0
 	github.com/google/uuid v1.6.0
 	github.com/joho/godotenv v1.5.1
 	golang.org/x/crypto v0.24.0
@@ -13,6 +14,7 @@ require (
 )
 
 require (
+	github.com/abakum/gozodiac v0.0.0-20230421061758-fa2f82ab0d93 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect
