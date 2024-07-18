@@ -12,6 +12,6 @@ type EventUserHistory struct {
 	EventLineUpID uuid.UUID `json:"eventLineUpId"`
 	TicketType    string    `json:"ticketType"` // GEN, OFC, VIP
 	Status        string    `json:"status"`     // DONE, BOOKED
-	CreatedAt     time.Time `json:"createdAt"`
-	UpdatedAt     time.Time `json:"updatedAt"`
+	CreatedAt     time.Time `json:"createdAt" gorm:"default:now()"`
+	UpdatedAt     time.Time `json:"updatedAt" gorm:"default:now()"`
 }

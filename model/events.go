@@ -12,8 +12,8 @@ type Event struct {
 	EventType      string    `json:"eventType"` // 2SHOT, HANDSHAKE, MEET_AND_GREET, VIDEO_CALL
 	Date           time.Time `json:"date"`
 	PricePerTicket uint32    `json:"pricePerTicket"`
-	CreatedAt      time.Time `json:"createdAt"`
-	UpdatedAt      time.Time `json:"updatedAt"`
+	CreatedAt      time.Time `json:"createdAt" gorm:"default:now()"`
+	UpdatedAt      time.Time `json:"updatedAt" gorm:"default:now()"`
 
 	LineUp []EventLineUp `json:"lineUp" gorm:"foreignKey:EventID"`
 }

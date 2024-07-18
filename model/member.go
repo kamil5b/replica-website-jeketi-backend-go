@@ -21,8 +21,8 @@ type Member struct {
 	Status       string    `json:"status"` //ACTIVE, INACTIVE, GRADUATED, RESIGN, TERMINATED
 	Generation   uint8     `json:"generation"`
 
-	CreatedAt time.Time      `json:"createdAt"`
-	UpdatedAt time.Time      `json:"updatedAt"`
+	CreatedAt time.Time      `json:"createdAt" gorm:"default:now()"`
+	UpdatedAt time.Time      `json:"updatedAt" gorm:"default:now()"`
 	DeletedAt gorm.DeletedAt `json:"-"`
 }
 

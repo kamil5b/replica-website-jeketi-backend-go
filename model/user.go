@@ -19,8 +19,8 @@ type User struct {
 	Sessions        []Session        `gorm:"foreignKey:UserRefer; constraint:OnUpdate:CASCADE, OnDelete:CASCADE;" json:"-"`
 	UserAttachments []UserAttachment `gorm:"foreignKey:UserID; constraint:OnUpdate:CASCADE;->" json:"userAttachments"`
 
-	CreatedAt time.Time      `json:"-" `
-	UpdatedAt time.Time      `json:"-"`
+	CreatedAt time.Time      `json:"-" gorm:"default:now()"`
+	UpdatedAt time.Time      `json:"-" gorm:"default:now()"`
 	DeletedAt gorm.DeletedAt `json:"-"`
 }
 

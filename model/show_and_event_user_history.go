@@ -14,6 +14,6 @@ type ShowAndEventUserHistory struct {
 	ShowType       string    `json:"showType"`   // THEATRE, OFC_EVENT, MINI_SHOW
 	Time           time.Time `json:"time"`
 	Status         string    `json:"status"` // LOSE, WIN, PENDING
-	CreatedAt      time.Time `json:"createdAt"`
-	UpdatedAt      time.Time `json:"updatedAt"`
+	CreatedAt      time.Time `json:"createdAt" gorm:"default:now()"`
+	UpdatedAt      time.Time `json:"updatedAt" gorm:"default:now()"`
 }

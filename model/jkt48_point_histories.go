@@ -21,8 +21,8 @@ type Jkt48PointHistory struct {
 	Status          string    `json:"status"` // SUCCESS, DECLINE, PENDING
 	PaymentID       uuid.UUID `json:"paymentId"`
 	ExpiredAt       time.Time `json:"expiredAt"`
-	CreatedAt       time.Time `json:"createdAt"`
-	UpdatedAt       time.Time `json:"updatedAt"`
+	CreatedAt       time.Time `json:"createdAt" gorm:"default:now()"`
+	UpdatedAt       time.Time `json:"updatedAt" gorm:"default:now()"`
 }
 
 func (p *Jkt48PointHistory) AfterUpdate(tx *gorm.DB) error {

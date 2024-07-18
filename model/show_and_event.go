@@ -15,6 +15,6 @@ type ShowAndEvent struct {
 	Quota    uint16               `json:"quota"`
 	LineUp   []ShowAndEventLineUp `json:"lineUp" gorm:"foreignKey:ShowID;->"`
 
-	CreatedAt time.Time `json:"-"`
-	UpdatedAt time.Time `json:"-"`
+	CreatedAt time.Time `json:"-" gorm:"default:now()"`
+	UpdatedAt time.Time `json:"-" gorm:"default:now()"`
 }
