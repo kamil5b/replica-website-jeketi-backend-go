@@ -3,6 +3,7 @@ package model
 import "github.com/google/uuid"
 
 type ShowAndEventLineUp struct {
-	ShowID   uuid.UUID
-	MemberID uuid.UUID
+	ShowID   uuid.UUID `json:"showId"`
+	MemberID uuid.UUID `json:"memberId"`
+	Member   Member    `gorm:"->"`
 }

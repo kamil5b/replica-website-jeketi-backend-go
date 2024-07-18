@@ -7,10 +7,13 @@ import (
 )
 
 type EventLineUp struct {
-	ID       uuid.UUID
-	MemberID uuid.UUID
-	EventID  uuid.UUID
-	Quota    uint16
-	Time     time.Time
-	Session  uint8
+	ID        uuid.UUID `gorm:"type:uuid;default:gen_random_uuid();primaryKey" json:"id"`
+	MemberID  uuid.UUID `json:"memberId"`
+	Member    Member    `json:"member" gorm:"->"`
+	EventID   uuid.UUID `json:"eventId"`
+	Quota     uint16    `json:"quota"`
+	StartTime time.Time `json:"startTime"`
+	EndTime   time.Time `json:"endTime"`
+	Line      uint16    `json:"line"`
+	Session   uint8     `json:"session"`
 }

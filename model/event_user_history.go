@@ -7,13 +7,11 @@ import (
 )
 
 type EventUserHistory struct {
-	ID            uuid.UUID
-	UserID        uuid.UUID
-	EventLineUpID uuid.UUID
-	TicketType    string // GEN, OFC, VIP
-	ShowType      string // 2SHOT, HANDSHAKE, MEET_AND_GREET, VIDEO_CALL
-	Time          time.Time
-	Status        string // DONE, BOOKED
-	CreatedAt     time.Time
-	UpdatedAt     time.Time
+	ID            uuid.UUID `gorm:"type:uuid;default:gen_random_uuid();primaryKey" json:"id"`
+	UserID        uuid.UUID `json:"userId"`
+	EventLineUpID uuid.UUID `json:"eventLineUpId"`
+	TicketType    string    `json:"ticketType"` // GEN, OFC, VIP
+	Status        string    `json:"status"`     // DONE, BOOKED
+	CreatedAt     time.Time `json:"createdAt"`
+	UpdatedAt     time.Time `json:"updatedAt"`
 }
