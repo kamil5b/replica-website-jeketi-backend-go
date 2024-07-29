@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"time"
 
+	"github.com/gofiber/fiber/v2"
 	guuid "github.com/google/uuid"
 	"gorm.io/gorm"
 )
@@ -16,7 +17,6 @@ type User struct {
 	Name            string           `json:"name"`
 	Role            string           `json:"role"` // FAN/MEMBER/STAFF
 	Properties      *UserProperty    `json:"properties" gorm:"foreignKey:UserID"`
-	Sessions        []Session        `gorm:"foreignKey:UserRefer; constraint:OnUpdate:CASCADE, OnDelete:CASCADE;" json:"-"`
 	UserAttachments []UserAttachment `gorm:"foreignKey:UserID; constraint:OnUpdate:CASCADE;->" json:"userAttachments"`
 
 	CreatedAt time.Time      `json:"-" gorm:"default:now()"`
@@ -49,4 +49,12 @@ type UserProperty struct {
 
 	Status    string       `json:"status"` // ACTIVE / BLACKLIST / INACTIVE / SUSPENDED
 	HeldUntil sql.NullTime `json:"-"`      // IF THERE IS SUSPENSION
+}
+
+func GetUserFromCtx(c *fiber.Ctx) *User {
+	user, ok := c.Locals("user").(User)
+	if ok {
+		return &user
+	}
+	return nil
 }

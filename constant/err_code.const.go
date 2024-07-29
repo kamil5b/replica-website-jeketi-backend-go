@@ -19,9 +19,17 @@ var (
 
 var (
 	BindingError = fiber.Map{
-		"code":       401,
+		"code":       400,
 		"jeketiCode": jeketiErrorCodeHandler + "_1",
 		"message":    "Binding validation error",
+	}
+)
+
+var (
+	UnauthorizedError = fiber.Map{
+		"code":       401,
+		"jeketiCode": jeketiErrorCodeMiddleware + "_1",
+		"message":    "Unauthorized",
 	}
 )
 

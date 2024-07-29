@@ -18,7 +18,7 @@ func Initalize(router *fiber.App) {
 	router.Use(middleware.Json)
 
 	users := router.Group("/users")
-	users.Post("/", handlers.CreateUser)
+	users.Post("/", handlers.Register)
 	users.Delete("/", middleware.Authenticated, handlers.DeleteUser)
 	users.Put("/", middleware.Authenticated, handlers.ChangePassword)
 	users.Post("/me", middleware.Authenticated, handlers.GetUserInfo)
